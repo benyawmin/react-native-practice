@@ -1,38 +1,46 @@
-import React from 'react'
-import { View, Text, StyleSheet, Button} from 'react-native'
+import React from "react";
+import { View, Text, StyleSheet, Button } from "react-native";
 
-const HomeScreen = ({navigation}) => {
-
-    return (
+const HomeScreen = ({ navigation }) => {
+  return (
     <View>
-        <Button
-        title="Intro"
-        onPress={() => navigation.navigate('Intro')}
-        />
+      <Button title="Intro" onPress={() => navigation.navigate("Intro")} />
 
-        <Button title="List"
+      <Button
+        title="List"
         onPress={() => {
-            navigation.navigate('List')
+          navigation.navigate("List");
         }}
-        />
+      />
 
-        <Button
+      <Button
         title="Go to Image Screen"
         onPress={() => {
-            navigation.navigate('Image')
+          navigation.navigate("Image");
         }}
-        />
+      />
 
+      <Button
+      title='Go to CounterScreen'
+      onPress={() => {
+        navigation.navigate('Counter')
+      }}
+      />
+
+      <Button
+      title="Go to RandomColorScreen"
+      onPress={() => {
+        navigation.navigate('Color')
+      }}
+      />
     </View>
-    )
-}
+  );
+};
 
 const styles = StyleSheet.create({
+  textStyle: {
+    fontSize: 30
+  }
+});
 
-    textStyle: {
-        fontSize: 30
-    }
-})
-
-export default HomeScreen
-
+export default HomeScreen;
